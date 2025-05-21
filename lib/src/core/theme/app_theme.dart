@@ -34,7 +34,7 @@ class AppColors {
     outline: Color(0xFFBDBDBD),
     outlineVariant: Color(0xFFCCCCCC),
     shadow: Colors.black,
-    scrim: Colors.black.withOpacity(0.5),
+    scrim: const Color(0x80000000), // Black with 50% opacity
     inverseSurface: Color(0xFF303030), // For elements on dark background in light theme
     onInverseSurface: Colors.white,
     inversePrimary: Color(0xFFD0BCFF), // For elements needing primary inversion
@@ -69,7 +69,7 @@ class AppColors {
     outline: Color(0xFF8A8A8A),
     outlineVariant: Color(0xFF525252),
     shadow: Colors.black, // Shadow is often less visible in dark theme
-    scrim: Colors.black.withOpacity(0.5),
+    scrim: const Color(0x80000000), // Black with 50% opacity
     inverseSurface: Color(0xFFE0E0E0), // For elements on light background in dark theme
     onInverseSurface: Colors.black,
     inversePrimary: Color(0xFF4A00E0), // For elements needing primary inversion
