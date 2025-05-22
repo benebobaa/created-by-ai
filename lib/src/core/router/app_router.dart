@@ -5,6 +5,7 @@ import '../../features/dashboard/presentation/home_shell.dart';
 import '../../features/dashboard/presentation/dashboard_tab.dart';
 import '../../features/feed/presentation/feed_tab.dart';
 import '../../features/settings/presentation/settings_tab.dart';
+import '../../features/auth/presentation/login_screen.dart';
 
 class AppRouter {
   static final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'root');
@@ -13,9 +14,14 @@ class AppRouter {
 
   static final GoRouter router = GoRouter(
     navigatorKey: _rootNavigatorKey,
-    initialLocation: '/home/dashboard', // Initial route
+    initialLocation: '/login', // Initial route
     debugLogDiagnostics: true, // Enable for debugging
     routes: <RouteBase>[
+      GoRoute(
+        path: '/login',
+        name: 'login',
+        builder: (BuildContext context, GoRouterState state) => const LoginScreen(),
+      ),
       // Main application shell with BottomNavigationBar
       StatefulShellRoute.indexedStack(
         builder: (BuildContext context, GoRouterState state, StatefulNavigationShell navigationShell) {
